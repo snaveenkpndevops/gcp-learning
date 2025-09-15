@@ -7,6 +7,4 @@ resource "google_storage_bucket" "this" {
   force_destroy               = each.value.force_destroy
   uniform_bucket_level_access = each.value.uniform_bucket_level_access
   labels                      = each.value.labels
-
 }
-
