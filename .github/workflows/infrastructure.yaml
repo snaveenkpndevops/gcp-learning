@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write   # OIDC auth
+      id-token: write   # Required for OIDC
 
     steps:
       - name: Checkout
@@ -34,6 +34,7 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+        working-directory: gcp-github-actions-connection/simple-terraform
 
       - name: Terraform Action
         run: |
@@ -42,3 +43,4 @@ jobs:
           else
             terraform apply -auto-approve
           fi
+        working-directory: gcp-github-actions-connection/simple-terraform
