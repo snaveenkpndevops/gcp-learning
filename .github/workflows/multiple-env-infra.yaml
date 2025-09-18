@@ -1,4 +1,4 @@
-name: Terraform Deploy
+name: Terraform multiple env Deploy
 
 on:
   workflow_dispatch:
