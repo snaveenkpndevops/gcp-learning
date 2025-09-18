@@ -44,7 +44,7 @@ jobs:
         run: |
           terraform init \
             -backend-config="prefix=gcp-infra/${{ github.event.inputs.environment }}"
-        working-directory: gcp-github-actions-connection/simple-terraform
+        working-directory: gcp-github-actions-connection/terraform-multiple-env-infra
 
       - name: Terraform Action
         run: |
